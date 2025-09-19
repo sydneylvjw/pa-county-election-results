@@ -1,12 +1,59 @@
+html {
+  font-family: sans-serif;
+}
+
 body {
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  /* this is how you get it to be in one column; flex is input into CSS  */
+  height: 100vh;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+header {
+  padding: 1rem;
+  background-color: #eee;
+  border: 1px solid black;
 }
 
 #map {
   height: 50vh;
-  background-color: purple;
+  width: 100%; 
+  /* % vs vh: & is percentage of the parent element; vh is of the viewport independent of the parent */
+  border-right: 1px solid black;
+  
 }
+
+main {
+  /* contains the map and view panel; child of the body element */
+  flex-direction: column;
+  height: 100%;
+  
+}
+
+@media screen and (width > 480px) {
+#info {
+  position: absolute;
+  padding: 1rem;
+  background-color: white;
+  top: 2rem;
+  right: 2rem;
+  bottom: 2 rem;
+  overflow: auto;
+  z-index: 10000;
+  /* needs a high z-index bc leaflet gives things inside of the map their own z-indexes */
+  border: 1px solid silver;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 5px rgb(0 0 /20%);
+  }
+}
+
+
 
 .legend {
   padding:0.5rem;
@@ -18,4 +65,10 @@ body {
   width: 0.8rem;
   height: 0.8rem;
   border-radius: 0.4rem;
+}
+
+#results * {
+  display: flex;
+  justify-content: flex-end;
+  display-width: 33hv;
 }

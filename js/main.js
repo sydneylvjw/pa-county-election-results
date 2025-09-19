@@ -63,7 +63,7 @@ dataLayer.addEventListener('click', (evt) => {
   const resultsDiv = infoDiv.querySelector('#results');
 
   resultsDiv.innerHTML = `
-    <h2>${props.name} County</h2>
+    <h2 style="flow-">${props.name} County</h2>
     <p><strong>2020 Presidential Election Results</strong></p>
     <dl>
       <dt>Total Votes:</dt>

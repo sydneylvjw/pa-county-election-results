@@ -8,20 +8,25 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <script type="module" src="js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
   <body>
-    <header>
+    <header> 
+      <!-- here is the page title and subtitle -->
       <h1>2020 Pennsylvania Presidential Election Results by County</h1>
       <p>This map shows the results of the 2020 presidential election in Pennsylvania by county. Click on a county to see the results.</p>
     </header>
+    
     <main>
+      <!-- main content goes in here -->
       <div id="map" aria-label="Map of Pennsylvania counties, showing which party won each county in the 2020 presidential election"></div>
       <div id="info" aria-live="assertive" aria-atomic="true">
 
         <p class="instructions">Click on a county to see the results.</p>
 
         <div id="results"></div>
+        <!-- so it looks like the div we are looking for is called results -->
         <svg id="chart"></svg>
       </div>
     </main>
